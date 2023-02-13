@@ -129,12 +129,11 @@ p {
 
 .footer { 
     position: fixed;
-    bottom: 2rem;
-    left: 50%;
-    transform: translateX(-50%);
+    bottom: 1rem;
     text-align: center;
     margin-top: 2rem;
+    width: 100%;
 }
 .footer a { 
-    color: var(--dark-cyan)
+    color: var(--dark-cyan);
 }
