@@ -1,0 +1,140 @@
+*,
+::before,
+::after { 
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+p,
+h1, 
+h2,
+h3,
+h4,
+h5,
+h6 { 
+    overflow-wrap: break-word;
+}
+:root { 
+    --cream: hsl(30, 38%, 92%);
+    --white: hsl(0, 0%, 100%);
+    --dark-grayish-blue: hsl(228, 12%, 48%);
+    --very-dark-blue: hsl(212, 21%, 14%);
+    --dark-cyan: hsl(158, 36%, 37%);
+    --very-dark-cyan: hsl(158, 36%, 18%);
+}
+body { 
+    min-height: 100vh;
+    font-size: 0.875rem;
+    background-color: var(--cream);
+    display: grid;
+    place-content: center;
+    padding: 1rem;
+    font-family: 'Montserrat', sans-serif;
+}
+.product { 
+    background-color: var(--white);
+    border-radius: .5rem;
+    overflow: hidden;
+    display: grid;
+    max-width: 620px;
+}
+@media (min-width: 500px) {
+    .product { 
+        grid-template-columns: 1fr 1fr;
+    }
+}
+.image { 
+    flex: 50%;
+    overflow: hidden;
+}
+
+img { 
+    display: block;
+    width: 100%;
+    transition: .6s all ease-in-out;
+}
+.image:hover img { 
+    transform: scale(1.2);
+}
+.info { 
+    display: grid;
+    gap: 1rem;
+    flex: 50%;
+    padding: 1.5rem;
+    
+}
+@media (min-width: 600px) {
+    .info { 
+       padding: 2rem;
+    }
+}
+.info span { 
+    color: var(--dark-grayish-blue);
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+h1 { 
+    font-size: 1.8rem;
+    line-height: 2rem;
+    color: var(--very-dark-blue);
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+}
+@media (min-width: 600px) {
+    h1 { 
+        font-size: 2.2rem;
+    }
+}
+p { 
+    color: var(--dark-grayish-blue);
+    font-size: 0.88rem;
+    line-height: 1.5rem;
+}
+.price { 
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.new-price { 
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--dark-cyan);
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+}
+.old-price { 
+    color: var(--dark-grayish-blue);
+    text-decoration: line-through;
+}
+.btn { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .5rem;
+    border: none;
+    border-radius: .5rem;
+    background: var(--dark-cyan);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .5s all ease;
+}
+.btn:hover { 
+    background-color: var(--very-dark-cyan);
+}
+.btn img { 
+    width: 20px;
+    margin-right: 10px;
+}
+
+.footer { 
+    position: fixed;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    margin-top: 2rem;
+}
+.footer a { 
+    color: var(--dark-cyan)
+}
